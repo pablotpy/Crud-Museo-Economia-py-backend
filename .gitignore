@@ -1,0 +1,118 @@
+# Archivos de Bytecode de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Huevos de Python
+*.egg-info/
+*.egg
+
+# Entornos virtuales de Python
+# (Si tu entorno se llama diferente, ajústalo o añade el nombre)
+venv/
+.venv/
+env/
+.env/
+ENV/
+.ENV/
+env.bak/
+venv.bak/
+
+# Archivos de configuración del entorno local (¡NUNCA subas secretos!)
+.env
+.env.*
+!.env.example # A menudo se usa un .env.example para mostrar la estructura
+
+# Bases de datos locales
+*.sqlite3
+*.db
+db.sqlite3 # Nombre por defecto de Django
+# Si usas otros SGBD localmente y guardas archivos, añádelos aquí
+# Por ejemplo, para volcados de PostgreSQL:
+# *.sql
+# *.dump
+
+# Archivos de media subidos por los usuarios (si los sirves localmente en desarrollo)
+# Asegúrate de que tu configuración de MEDIA_ROOT no esté dentro de una carpeta versionada
+# o si lo está, ignora su contenido específico.
+# Si tu MEDIA_ROOT es 'media/', entonces:
+# media/
+# A menos que quieras versionar archivos por defecto en media, entonces ignora subdirectorios específicos:
+# media/uploads/
+
+# Archivos estáticos recolectados (collectstatic)
+# Generalmente se generan en el servidor de producción, no se versionan.
+# Si tu STATIC_ROOT es 'staticfiles/' o 'static_collected/':
+staticfiles/
+static_collected/
+# A veces, los desarrolladores prefieren no ignorar la carpeta raíz de estáticos si contiene
+# los estáticos de las apps, pero sí la carpeta de collectstatic.
+
+# Archivos de registro (logs)
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+celerybeat-schedule
+*.pid
+
+# Archivos de configuración específicos del editor y del IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+nbproject/
+*.swp
+*~
+*.bak
+*.orig
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Cobertura de tests
+.coverage
+.coverage.*
+htmlcov/
+pytest_cache/
+.pytest_cache/
+
+# Documentación generada
+build/
+docs/_build/
+
+# Archivos de distribución/empaquetado de Python
+dist/
+*.tar.gz
+*.zip
+*.whl
+
+# Archivos de Jupyter Notebook
+.ipynb_checkpoints
+
+# Sass y SCSS cache
+.sass-cache/
+.scss-cache/
+
+# Dependencias de Node (si usas frontend con Node.js)
+node_modules/
+package-lock.json # Algunos prefieren versionar este, otros no. Si trabajas en equipo, es recomendable.
+yarn.lock # Similar a package-lock.json para Yarn.
+
+# Archivos de compilación de Django (traducciones)
+*.mo
+
+# Archivos de Heroku (si aplica)
+.heroku/
+Procfile.windows
+
+# Otros archivos temporales o específicos del proyecto que no deben ser versionados
+# temp/
+# local_settings.py # Un patrón común para configuraciones locales no versionadas
+
+# Archivos relacionados con Docker (si los archivos de imagen son muy grandes o generados)
+# .dockerignore se encarga de esto para la construcción de la imagen, pero podrías querer ignorarlos aquí también
+# docker-compose.override.yml # Para overrides locales
