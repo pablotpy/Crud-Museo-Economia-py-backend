@@ -35,6 +35,8 @@ class VisitorSerializer(serializers.ModelSerializer):
         # fields = ['id', 'ci_number', 'first_name', 'last_name', 'country', 'email', 'phone_number', 'date_of_birth', 'created_at', 'updated_at']
 
 class AttendanceRecordSerializer(serializers.ModelSerializer):
+    visitor_details = VisitorSerializer(source='visitor', read_only=True)
+    user_details = UserSerializer(source='registered_by_user', read_only=True, allow_null=True)
     visitor_ci = serializers.CharField(source='visitor.ci_number', read_only=True, allow_null=True)
     visitor_name = serializers.SerializerMethodField(read_only=True)
     user_username = serializers.CharField(source='registered_by_user.username', read_only=True, allow_null=True)
@@ -48,7 +50,9 @@ class AttendanceRecordSerializer(serializers.ModelSerializer):
         fields = [
             'id', 
             'visitor', 
-            'visitor_ci', 
+            'visitor_ci',
+            'visitor_details',
+            'user_details', 
             'visitor_name', 
             'entry_timestamp', 
             'exit_timestamp', 
